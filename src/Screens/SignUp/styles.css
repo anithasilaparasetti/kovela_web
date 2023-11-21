@@ -1,0 +1,99 @@
+.signupcontainer{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 13px;
+   
+}
+::placeholder{
+    color:gray;
+}
+.signup{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid lightgray;
+    max-width:440px;
+    margin-top: 50px;
+}
+@media (width < 500px),(orientation:portrait) {
+    .signup{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+       
+    }
+}
+@media (height < 500px),(orientation:portrait) {
+    .signup{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        height:100%;
+       
+    }
+    .inputcontainer{
+        height:100%;
+    }
+    input{
+        height:100%;
+    }
+}
+.main{
+    max-width: 280px;
+   
+ 
+}
+button{
+    color:white
+}
+.horizontal{
+    display: flex;
+    justify-content: space-evenly;
+}
+.hrline{
+    width:100px;
+}
+.inputcontainer{
+    display: flex;
+    flex-direction: column;
+}
+ 
+.generaltext{
+    color:rgb(160, 158, 158);
+    font-weight:350 ;
+}
+.have-an-account{
+    border:1px solid rgb(225, 220, 220);
+    width:315px;
+    display: flex;
+    justify-content:center;
+ 
+   
+}
+.signupinput{
+    margin-bottom: 4px;
+    background-color: rgb(255, 255, 255);
+    height: 5vh;
+    border-radius: 4px;
+    border: 1px solid rgba(138, 136, 136, 0.3);
+}
+ 
+.get-app{
+    flex-direction: column;
+}
+.apptext{
+    text-align: center;
+}
+.get-app-stores{
+    max-width:150px;
+    height:50px;
+}
+.footersection{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    color: rgb(152, 148, 148);
+}
