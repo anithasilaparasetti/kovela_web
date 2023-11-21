@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Formik } from "formik";
 import { LoginValidationSchema } from "../../commons/schemas";
@@ -8,8 +8,10 @@ import { Login } from "../../utils/api";
 import { saveLoginSessionDetails } from "../../utils/preferences/localStorage";
 
 
+
 const SignIn = () => {
   const [data, setData] = useState("");
+  const [msg, setMsg] = useState("");
 
   const signinHandler = async (data, actions) => {
     console.log("function call");
@@ -21,7 +23,7 @@ const SignIn = () => {
     console.log("payload", payload);
     try {
       let result = await Login(payload);
-      console.log("ACCESS_TOKEN", result)
+      console.log("ACCESS_TOKEN", result);
       if (result && result.status === 200) {
         const {
           data: { accessToken, tokenType },
@@ -31,20 +33,24 @@ const SignIn = () => {
         actions.setSubmitting(false);
       } else {
         actions.setSubmitting(false);
-        alert('Error', result?.message);
+        setMsg(result?.message);
+        console.log(msg)
+
+        if(result?.message === "Request failed with status code 401"){
+          setMsg ("Sorry, your password was incorrect. Please double-check your password.")
+        }
       }
     } catch (error) {
-      console.log('error in signin', error);
+      console.log("error in signin", error);
       actions.setSubmitting(false);
     }
   };
 
-  console.log(" call", data)
+  console.log(" call", data);
 
   return (
     <div className="App">
       <div className="images">
-
         <img
           className="mobile2"
           src="https://media0.giphy.com/media/hsDY1IPzpP4DcB1Ba5/giphy.gif?cid=ecf05e472t4fr9ci0ry2dpg4muku2715nejhiodxpcbcbidv&ep=v1_gifs_search&rid=giphy.gif&ct=g"
@@ -60,11 +66,11 @@ const SignIn = () => {
             <Formik
               onSubmit={(values, formikAction) => {
                 const { primaryContact, password } = values;
-                signinHandler(values, formikAction)
+                signinHandler(values, formikAction);
               }}
               initialValues={{
-                primaryContact: '',
-                password: '',
+                primaryContact: "",
+                password: "",
               }}
               validationSchema={LoginValidationSchema}
             >
@@ -91,7 +97,11 @@ const SignIn = () => {
                           id="primaryContact"
                         />
                       </div>
-                      {errors.primaryContact && <p className="error">{errors.primaryContact}</p>}
+                      <div className="error-alignment">
+                        {errors.primaryContact && (
+                          <p className="error">{errors.primaryContact}</p>
+                        )}
+                      </div>
                       <div className="inputfieldContainer">
                         <label>Password</label>
                         <input
@@ -101,19 +111,28 @@ const SignIn = () => {
                           value={values?.password}
                           onChange={handleChange}
                           onBlur={handleBlur}
-                          id="password"   
+                          id="password"
                         />
                       </div>
-                      {errors.password && <p className="error">{errors.password}</p>}
+                      <div className="error-alignment">
+                        {errors.password && (
+                          <p className="error">{errors.password}</p>
+                        )}
+                      </div>
                     </div>
 
                     <div>
-                      <button className="button mb-3" type="submit" onClick={handleSubmit}>Login</button>
+                      <button
+                        className="button mb-3"
+                        type="submit"
+                        onClick={handleSubmit}
+                      >
+                        Login
+                      </button>
                     </div>
                   </div>
-                )
+                );
               }}
-
             </Formik>
             <div className="lines">
               <hr className="line" />
@@ -121,8 +140,8 @@ const SignIn = () => {
               <hr className="line" />
             </div>
 
-            <div className="facebookcontainer">
-
+            <div className="error">
+              {msg && <p>{msg}</p>}
             </div>
 
             <p className="forgotpassword">forgot password?</p>
@@ -130,7 +149,8 @@ const SignIn = () => {
 
           <div className="bottom mt-2 mb-2">
             <p className="account-signup">
-              Don't have an account?<Link to="/AccountInformation">click here</Link>
+              Don't have an account?
+              <Link to="/AccountInformation">click here</Link>
             </p>
           </div>
 
