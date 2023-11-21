@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./styles.css";
 import { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Formik } from "formik";
 import { LoginValidationSchema } from "../../commons/schemas";
 import { Login } from "../../utils/api";
 import { saveLoginSessionDetails } from "../../utils/preferences/localStorage";
+import ApplicationContext from "../../utils/context-api/Context";
+
 
 
 const SignIn = () => {
   const [data, setData] = useState("");
+  const {setLoginDetails, setUserDetails} = useContext(ApplicationContext);
+  const navigate = useNavigate();
+  const [message , setMessage ] = useState('');
 
   const signinHandler = async (data, actions) => {
     console.log("function call");
@@ -28,7 +33,9 @@ const SignIn = () => {
         } = result;
         await saveLoginSessionDetails(tokenType, accessToken);
         setData(accessToken);
+        setLoginDetails(accessToken);
         actions.setSubmitting(false);
+        navigate("/AccountInformation")
       } else {
         actions.setSubmitting(false);
         alert('Error', result?.message);
