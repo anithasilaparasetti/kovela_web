@@ -130,7 +130,7 @@ const SignIn = () => {
 
           <div className="bottom mt-2 mb-2">
             <p className="account-signup">
-              Don't have an account?<Link to="/SignUp">click here</Link>
+              Don't have an account?<Link to="/AccountInformation">click here</Link>
             </p>
           </div>
 
