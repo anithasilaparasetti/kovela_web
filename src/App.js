@@ -14,11 +14,9 @@ function App() {
 
   const getLoginDetails = async () => {
     let authDetails = await getAuthTokenDetails();
-    console.log("---jkhkjhkjhkj", authDetails);
     setLoginDetails(authDetails)
 
   }
-  console.log("what is response", loginDetails);
   useEffect(() => {
     getLoginDetails();
   }, []);
@@ -28,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/" Component={SignIn} />
         <Route path="/SignIn" Component={SignIn} />
-        <Route path="/SignUp" Component={SignUp} />
+        <Route path="/Signup" Component={SignUp} />
         <Route path="/AccountInformation" Component={AccountInformation} />
         <Route path="/Home" Component={Home} />
       </Routes>
