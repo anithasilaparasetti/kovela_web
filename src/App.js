@@ -37,6 +37,7 @@ function App() {
     return (
       <Routes>
         <Route path="/AccountInformation" Component={AccountInformation} />
+        <Route path="/Home" Component={Home} />
       </Routes>
     )
   }
