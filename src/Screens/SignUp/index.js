@@ -13,6 +13,8 @@ const SignUp = () => {
   const [otp, setOtp] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const [msg, setMsg] = useState("");
+  const [otpError, setOtpError] = useState("");
 
   const signinHandler = async (data) => {
     console.log("function call");
@@ -31,14 +33,19 @@ const SignUp = () => {
         } = result;
         await saveLoginSessionDetails(tokenType, accessToken);
         setLoginDetails(accessToken);
-        navigate("/AccountInformation")
+        let ROLES = result?.data?.roles;
+        var roleAdmin = ROLES?.indexOf('ROLE_ADMIN') > -1;
+        var roleAgent = ROLES?.indexOf('ROLE_AGENT') > -1;
+        var roleUser = ROLES?.indexOf('ROLE_USER') > -1;
+        console.log('role', roleAdmin, roleAgent, roleUser);
+        if (roleAdmin || roleAgent) {
+          navigate("/Home")
+        } else if (roleUser) {
+          navigate("/AccountInformation")
+        }
       } else {
         setMessage(result?.message);
         console.log(message)
-
-        if (result?.message === "Request failed with status code 401") {
-          setMessage("Sorry, your password was incorrect. Please double-check your password.")
-        }
       }
     } catch (error) {
       console.log("error in signin", error);
@@ -58,7 +65,11 @@ const SignUp = () => {
         setOtp(result?.data?.otp);
         setLoading(true);
       } else {
-        throw new Error('everything went wrong');
+        console.log("otp error", result?.data?.message);
+
+        if(result?.data?.message === "Primary Contact Is Required"){
+          setOtpError("phoneNumber is required");
+        }
 
       }
     } catch (error) {
@@ -77,20 +88,23 @@ const SignUp = () => {
       primaryContact: data?.primaryContact,
       email: data?.email,
       password: data?.password,
-      otp:otp
+      otp: otp
     }
-
-    // console.log("SIGNUP PAYLOAD", payLoad);
 
     try {
       let result = await userSignUp(payLoad);
       console.log("SIGN UP RESULT", result);
       if (result && result.status === 200) {
         signinHandler(data);
-        console.log("msg", result?.data);
+        console.log("msg", result?.data?.message);
       } else {
-        setMessage()
-        console.log("something went wrong", result?.data?.message);
+        console.log("something went wrong", result?.response?.data?.message);
+
+        if (result?.response?.data?.message === "Error: phoneNumber is already taken!") {
+          setMessage("phoneNumber is already taken!");
+        } else if (result?.response?.data?.message === "Error: Email is already in use!") {
+          setMessage("Email is already in use!");
+        }
 
       }
     } catch (error) {
@@ -231,8 +245,8 @@ const SignUp = () => {
                     />
                   </div>
                   <div className="error-alignment">
-                    {errors.email && (
-                      <p className="error">{errors.email}</p>
+                    {message || errors.primaryContact && (
+                      <p className="error">{errors.primaryContact}</p>
                     )}
                   </div>
 
@@ -247,7 +261,7 @@ const SignUp = () => {
                       id="otp"
 
                     />
-                    <button 
+                    <button
                       style={{ color: "white", backgroundColor: "blue", borderRadius: "20px" }} type="button" onClick={() => otpGenerate(values, handleBlur)}>getOTP</button>
                   </div>
 
@@ -269,7 +283,11 @@ const SignUp = () => {
                     </p>
                   </div>
                   <div>
-                   <button className="btn btn-primary" type="submit" onClick={() => UserRegistration(values)}>Sign up</button>
+                    <button className="btn btn-primary" type="submit" onClick={() => UserRegistration(values)}>Sign up</button>
+                  </div>
+
+                  <div className="error">
+                    {message && <p>{message}</p>}
                   </div>
                 </div>
               )
@@ -277,6 +295,7 @@ const SignUp = () => {
           </Formik>
         </div>
       </div>
+
 
       <div className="mt-3 p-2 have-an-account">
         <p>

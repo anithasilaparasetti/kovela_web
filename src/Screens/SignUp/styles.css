@@ -114,5 +114,9 @@ button{
   .otp{
     display: flex;
     flex-direction: row;
-    width: ;
 }
+
+.error{
+    color: red;
+    margin-top:6px;
+  }
