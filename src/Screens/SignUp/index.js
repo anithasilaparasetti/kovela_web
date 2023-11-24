@@ -248,7 +248,7 @@ const SignUp = () => {
 
                     />
                     <button 
-                      style={{ color: "white", backgroundColor: "blue", borderRadius: "20px" }} type="button" onClick={() => otpGenerate(values, handleBlur)}>getOTP</button>
+                      style={{ color: "white", backgroundColor: "blue", borderRadius: "20px" }} type="button" onClick={() => otpGenerate(values)}>getOTP</button>
                   </div>
 
                   <div className="error-alignment">
