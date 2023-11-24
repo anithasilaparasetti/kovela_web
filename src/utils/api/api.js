@@ -6,11 +6,11 @@ export const BASEURL = 'http://20.235.89.214:9092/api/';
 let bearer_token = getAuthTokenDetails();
 
 export const authAxiousInstance1 = axios.create({
-    baseURL: BASEURL,
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+  baseURL: BASEURL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
 
   export const axiousInstanceNew1 = axios.create({
     baseURL: BASEURL,
