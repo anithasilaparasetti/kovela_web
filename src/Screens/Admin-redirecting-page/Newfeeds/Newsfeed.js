@@ -10,7 +10,7 @@ function Newsfeed() {
     <div className="m-3 Newfeed p-3 ">
      <p>New feeds</p>
       <div className="d-flex feed mb-2">
-        
+      
       <FontAwesomeIcon icon={faTv} style={{color: "#132dff",}} />
       <p>New Feeds</p>
       </div>

@@ -7,7 +7,6 @@ import Account from "../Admin-redirecting-page/Account-details/Account";
 import Gridcontainer from "../Admin-redirecting-page/Grid-container/Gridcontainer";
 
 
-
 function admin() {
   return (
     <div className="Admin">

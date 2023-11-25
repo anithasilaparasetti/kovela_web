@@ -13,7 +13,6 @@ function Header() {
         
         <p className="header-text">Kovela</p>
       </div>
-
       <div className="search-container">
         <div className="d-flex input-container p-2">
         <FontAwesomeIcon icon={faMagnifyingGlass} style={{color:"#c4c0c0",}} className="search-icon-position"/>

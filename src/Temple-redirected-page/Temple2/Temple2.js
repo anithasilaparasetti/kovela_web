@@ -15,7 +15,7 @@ function Temple2() {
         <div className="leftmenu">
           <Newsfeed />
           <Morepages />
-          <Account />
+          <Account /> 
         </div>
         <div className="p-5 temple-container">
           <div className="p-5">

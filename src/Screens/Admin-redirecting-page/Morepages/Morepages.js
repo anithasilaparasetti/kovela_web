@@ -12,7 +12,6 @@ function Morepages() {
       <FontAwesomeIcon icon={faEnvelope} bounce style={{color: "#132dff",}} />
         <p>Email Box</p>
       </div>
-
       <div className="d-flex feed mb-2">
       <FontAwesomeIcon icon={faHotel} style={{color: "#132dff",}} />
         <p>Near Hotel</p>

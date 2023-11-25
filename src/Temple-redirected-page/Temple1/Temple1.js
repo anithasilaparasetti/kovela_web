@@ -10,7 +10,7 @@ function Temple1() {
     <div>
       <div className="p-3">
         <Header />
-      </div>
+      </div> 
       <div className="admin-container p-1 d-flex">
         <div className="leftmenu">
           <Newsfeed />

@@ -82,3 +82,4 @@ function Temple3() {
 
 export default Temple3;
 
+ 

@@ -16,6 +16,7 @@ function Temple4() {
           <Newsfeed />
           <Morepages />
           <Account />
+          
         </div>
         <div className="p-5 temple-container">
           <div className="p-5">

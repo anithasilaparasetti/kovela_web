@@ -12,8 +12,6 @@ import Temple3 from "./Temple-redirected-page/Temple3/Temple3";
 import Temple4 from "./Temple-redirected-page/Temple4/Temple4";
 
 
-
-
 function App() {
 
   const [loginDetails, setLoginDetails] = useState(null);
