@@ -120,3 +120,43 @@ button{
     color: red;
     margin-top:6px;
   }
+
+  .button{
+    color: "white"; 
+    border-radius: 20px;
+    width: 50px;
+    height: 18px;
+    font-size: 10px;
+    margin-left: -80px;
+    margin-top:5px;
+    text-align: center;
+  }
+
+  .otpContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: auto;
+  }
+.otpInput{
+    margin-bottom: 4px;
+    background-color: rgb(255, 255, 255);
+    height: 5vh;
+    border-radius: 4px;
+    border: 1px solid rgba(138, 136, 136, 0.3);
+    width: 500px;
+}
+.otp{
+    width:100px;
+    border:none;
+    
+}
+.input-otp-container{
+border: solid rgba(138, 136, 136, 0.3);
+border-width:1px;
+border-radius:4px;
+width:500px;
+display: flex;
+justify-content:space-between;
+height:5vh;
+}

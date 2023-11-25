@@ -67,7 +67,7 @@ const SignUp = () => {
       } else {
         console.log("otp error", result?.data?.message);
 
-        if(result?.data?.message === "Primary Contact Is Required"){
+        if (result?.data?.message === "Primary Contact Is Required") {
           setOtpError("phoneNumber is required");
         }
 
@@ -250,19 +250,27 @@ const SignUp = () => {
                     )}
                   </div>
 
-                  <div className="otp">
-                    <input
-                      className=""
-                      placeholder="otp"
-                      type="text"
-                      value={otp}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      id="otp"
+                  <div className="otpContainer">
+                    <div className="d-flex input-otp-container">
+                      <input
+                        placeholder="otp"
+                        type="text"
+                        value={otp}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        id="otp"
+                        className="otp"
 
-                    />
-                    <button 
-                      style={{ color: "white", backgroundColor: "blue", borderRadius: "20px" }} type="button" onClick={() => otpGenerate(values)}>getOTP</button>
+                      />
+                      <div>
+                        <button
+                          className="button primary"
+                          type="button"
+                          onClick={() => otpGenerate(values)}>
+                          get OTP
+                        </button>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="error-alignment">
