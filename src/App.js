@@ -47,7 +47,6 @@ function App() {
       <Routes>
         <Route path="/AccountInformation" Component={AccountInformation} />
         <Route path="/Admin" Component={Admin} />
-        <Route path="/Home" Component={Home} />
       </Routes>
     )
   }
