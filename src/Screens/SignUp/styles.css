@@ -97,3 +97,26 @@ button{
     width: 500px;
     color: rgb(152, 148, 148);
 }
+
+.error{
+    color: red;
+    margin-top:-4px;
+  }
+  .error-alignment{
+    width:300px;
+    padding-left:30px;
+    font-size: 13px;
+    display: flex;
+    justify-content:start;
+    margin-left:3px;
+  }
+
+  .otp{
+    display: flex;
+    flex-direction: row;
+}
+
+.error{
+    color: red;
+    margin-top:6px;
+  }

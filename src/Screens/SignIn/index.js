@@ -169,7 +169,7 @@ console.log("Data in the sign in page =>>>>" + data)
           <div className="bottom mt-2 mb-2">
             <p className="account-signup">
               Don't have an account?
-              <Link to="/SignUp">click here</Link>
+              <Link to="/Signup">click here</Link>
             </p>
           </div>
 
