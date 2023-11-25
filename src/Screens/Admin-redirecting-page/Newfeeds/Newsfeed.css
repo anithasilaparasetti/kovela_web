@@ -1,0 +1,19 @@
+.Newfeed{
+    border-radius:8px ;
+    border:black;
+    background-color: white;
+}
+
+.feed{
+    width:150px;
+    justify-content: space-between;
+    margin-left:10px;
+    display: flex;
+    align-self: center;
+    
+    
+}
+.feather-tv:before {
+	content: "\e9e9";
+}
+

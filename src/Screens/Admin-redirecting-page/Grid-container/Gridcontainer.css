@@ -1,0 +1,21 @@
+
+.grid {
+  text-align: center;
+}
+.gridcontainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.imagecontainer {
+  background-color: lightgray;
+  text-align: center;
+}
+
+.imagee {
+  width: 100px;
+  height: 100px;
+}
+
+.four-image-container{
+  margin-bottom:-95px;
+}

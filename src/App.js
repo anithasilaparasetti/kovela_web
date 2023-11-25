@@ -4,8 +4,14 @@ import SignUp from "./Screens/SignUp";
 import AccountInformation from './Screens/account-details';
 import { useEffect, useState } from "react";
 import ApplicationContext from "./utils/context-api/Context";
-import Home from "./Screens/Home";
-import { getAuthTokenDetails } from "./utils/preferences/localStorage";
+import { getAuthTokenDetails,saveUserDetails } from "./utils/preferences/localStorage";  
+import Admin from "../src/Screens/admin/Admin"
+import Temple1 from "./Temple-redirected-page/Temple1/Temple1";
+import Temple2 from "./Temple-redirected-page/Temple2/Temple2";
+import Temple3 from "./Temple-redirected-page/Temple3/Temple3";
+import Temple4 from "./Temple-redirected-page/Temple4/Temple4";
+
+
 
 
 function App() {
@@ -14,9 +20,10 @@ function App() {
 
   const getLoginDetails = async () => {
     let authDetails = await getAuthTokenDetails();
+    const userDetails = await saveUserDetails();
+    console.log("userDetails =>>>>>" + userDetails)
     console.log("---jkhkjhkjhkj", authDetails);
     setLoginDetails(authDetails)
-
   }
   console.log("what is response", loginDetails);
   useEffect(() => {
@@ -30,7 +37,13 @@ function App() {
         <Route path="/SignIn" Component={SignIn} />
         <Route path="/SignUp" Component={SignUp} />
         <Route path="/AccountInformation" Component={AccountInformation} />
-        <Route path="/Home" Component={Home} />
+        <Route path="/Admin" Component={Admin} />
+        <Route path="/Temple1" Component={Temple1} />
+        <Route path="/Temple2" Component={Temple2} />
+        <Route path="/Temple3" Component={Temple3} />
+        <Route path="/Temple4" Component={Temple4} />
+       
+        
       </Routes>
     )
   }
@@ -39,6 +52,9 @@ function App() {
     return (
       <Routes>
         <Route path="/AccountInformation" Component={AccountInformation} />
+        <Route path="/Admin" Component={Admin} />
+        
+        
       </Routes>
     )
   }
@@ -48,7 +64,8 @@ function App() {
     <ApplicationContext.Provider
       value={{
         loginDetails,
-        setLoginDetails
+        setLoginDetails,
+
       }}>
       {loginDetails ? (
         <AuthStack />

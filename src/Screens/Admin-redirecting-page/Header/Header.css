@@ -1,0 +1,83 @@
+.socialia{
+    display:flex;
+    width:130px;
+    justify-content: space-between;
+    margin-right:130px;
+}
+.socialia-icon-position{
+    display: flex;
+    margin-top:11px;
+}
+.socialia-icon{
+    height:25px;
+}
+input{
+    
+    border-radius: 8px;
+    height:25px;
+    border:none;
+    background-color:#f2f0f0;
+   
+}
+
+.input-styles{
+   display: flex;
+   align-self: center;
+   margin-left: 8px;
+   width:300px;
+}
+.search-icon-position{
+margin-top: 10px;
+margin-left:8px;
+margin-bottom: 5px;
+}
+.search-container{
+    margin-right:150px;
+    width: 300px;
+    
+}
+.input-container{
+    width:400px;
+    height:50px;
+    background-color: #f2f0f0;
+    border-radius: 24px;
+    display: flex;
+    align-self:center;
+   
+}
+.feather-zap:before {
+	content: "\ea06";
+}
+.icon-container{
+    display: flex;
+    width:300px;
+    justify-content: space-between;
+    margin-right: 200px;
+    margin-top: 2px;
+}
+.icon{
+    background-color:#f2f0f0;
+    border-radius: 24px;
+    height: 50px;
+    width:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.header{
+    padding-left:24px;
+    height:10vh;
+    display: flex;
+
+}
+.end-icon-container{
+    width:200px;
+    justify-content: space-between;
+}
+.header-text{
+    color:blue;
+    font-weight: bold;
+    font-size:25px;
+}

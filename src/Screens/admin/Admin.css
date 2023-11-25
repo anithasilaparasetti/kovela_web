@@ -1,0 +1,17 @@
+.Admin{
+   
+}
+.admin-container{
+    background-color:#f7f7f5;
+}
+.leftmenu{
+    overflow-y:scroll;
+    background-color:#f7f7f5;
+    min-width:280px;
+    height:600px;
+}
+
+.image{
+    width:150px;
+}
+
