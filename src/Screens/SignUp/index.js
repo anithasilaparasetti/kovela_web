@@ -39,7 +39,7 @@ const SignUp = () => {
         var roleUser = ROLES?.indexOf('ROLE_USER') > -1;
         console.log('role', roleAdmin, roleAgent, roleUser);
         if (roleAdmin || roleAgent) {
-          navigate("/Home")
+          navigate("/Admin")
         } else if (roleUser) {
           navigate("/AccountInformation")
         }
