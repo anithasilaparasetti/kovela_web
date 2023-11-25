@@ -1,0 +1,65 @@
+.temple-image{
+    background-image:url("https://img.traveltriangle.com/blog/wp-content/uploads/2020/01/temples-in-India_8th-jan.jpg");
+    height:250px;
+    width:1000px;
+    background-size:cover;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+
+.posts-followers-follow{
+    margin-right: 300px;
+    margin-left:100px
+}
+.temple-logo{
+    margin-right: 400px;
+}
+.addname-container{
+   
+}
+
+.posts-temple-addname{
+    height:150px;
+    background-color: aqua ;
+}
+.options-container{
+    height:100px;
+    background-color:aquamarine;
+    display: flex;
+    justify-content: space-evenly;
+}
+.options{
+    
+}
+.About-container{
+    
+    margin-top: 15px;
+    width:300px;
+    background-color: white;
+    border-radius: 24px;
+}
+.temple-container{
+    background-color:#f7f7f2;
+}
+.photos-container-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.photos-image{
+    height:100px;
+    width:100px;
+    margin-right: 30px;
+}
+
+.Event-container{
+    
+    margin-top: 15px;
+    width:300px;
+    background-color: white;
+    border-radius: 24px;
+}
+.event-container-heading{
+    display: flex;
+    justify-content: space-between;
+}
+

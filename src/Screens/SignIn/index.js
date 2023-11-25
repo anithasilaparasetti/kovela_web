@@ -8,12 +8,15 @@ import { Login } from "../../utils/api";
 import { saveLoginSessionDetails } from "../../utils/preferences/localStorage";
 import ApplicationContext from "../../utils/context-api/Context";
 
+
 const SignIn = () => {
   const [data, setData] = useState("");
   const {setLoginDetails, setUserDetails} = useContext(ApplicationContext);
   const navigate = useNavigate();
-
+console.log("setLoginDetails =>>> " + setLoginDetails)
+console.log("Data in the sign in page =>>>>" + data)
   const [msg, setMsg] = useState("");
+  const [role,setRole] = useState([]);
 
   const signinHandler = async (data, actions) => {
     console.log("function call");
@@ -26,15 +29,27 @@ const SignIn = () => {
     try {
       let result = await Login(payload);
       console.log("ACCESS_TOKEN", result);
+      console.log(result.data.roles)
+      
       if (result && result.status === 200) {
+        
         const {
-          data: { accessToken, tokenType },
+          data: { accessToken, tokenType},
         } = result;
         await saveLoginSessionDetails(tokenType, accessToken);
+
         setData(accessToken);
         setLoginDetails(accessToken);
-        actions.setSubmitting(false);
-        navigate("/AccountInformation")
+        actions.setSubmitting(false); 
+
+        console.log("roles length =>>>>>" + result.data.roles.length)
+        if(result.data.roles.length === 2 ){
+        navigate("/Admin")
+        }
+        else{
+          navigate("/AccountInformation")
+        }
+        
       } else {
         actions.setSubmitting(false);
         setMsg(result?.message);
