@@ -7,7 +7,7 @@ import Account from "../Admin-redirecting-page/Account-details/Account";
 import Gridcontainer from "../Admin-redirecting-page/Grid-container/Gridcontainer";
 import { Link } from "react-router-dom";
 
-function admin() {
+function Admin() {
   return (
     <div className="Admin">
       <div className="p-3">
@@ -122,4 +122,4 @@ function admin() {
   );
 }
 
-export default admin;
+export default Admin;

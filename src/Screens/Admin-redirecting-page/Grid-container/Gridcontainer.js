@@ -1,151 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Gridcontainer.css";
 import { Link } from "react-router-dom";
+import { AdminTemples } from "../../../utils/api";
 
-function Gridcontainer(props) {
+
+function Gridcontainer() {
+  const [data, setData] = useState([]);
+
+  const AdminProfiles = async () => {
+
+    try {
+      let result = await AdminTemples();
+      console.log("profiles list", result);
+
+      if (result && result.status === 200) {
+        setData(result?.data?.data);
+        console.log("list", result);
+      } else {
+        alert("alert");
+      }
+
+    } catch (error) {
+      console.log("error", error);
+    }
+  }
+
+  console.log("temple data", data);
+
+  useEffect(() => {
+    AdminProfiles();
+  }, []);
+
   return (
-    <div className="gridcontainer">
-      <div className="d-flex four-image-container">
-        <div className="grid p-5 m-1">
-          <div className="imagecontainer p-4">
-            <Link to="/Temple1">
-              <img
-                className="imagee"
-                src={props.img}
-              />
-            </Link>
-          </div>
-          <h5>{props.heading}</h5>
-          <p>{props.price}</p>
-        </div>
-        {/* <div className="grid p-5 m-1">
-          <div className="imagecontainer p-4">
-            <Link to="/Temple2">
-              <img
-                className="imagee"
-                src="https://theos.in/blogs/hm/movie_HANUMAN_epic_story.jpg"
-              />
-            </Link>
-          </div>
-          <h5>Hanuman</h5>
-          <p>price</p>
-        </div>
-        <div className="grid p-5 m-1">
-          <div className="imagecontainer p-4">
-            <Link to="/Temple3">
-            <img
-              className="imagee"
-              src="https://theos.in/blogs/hm/movie_HANUMAN_epic_story.jpg"
-            />
-            </Link>
-            
-           
-          </div>
-          <h5>Hanuman</h5>
-          <p>price</p>
-        </div>
+    <div className="grid">
+      <h1> Temples</h1>
+      <h1>Collection</h1>
+      {data && data.map((item) => {
+        return (
+          <div>
+            <div>
+              <img src={item?.logo} />
+            </div>
+            <div>{item?.name}</div>
 
-        <div className="grid p-5 m-1">
-          <div className="imagecontainer p-4">
-            <Link to="/Temple4">
-            <img
-              className="imagee"
-              src="https://theos.in/blogs/hm/movie_HANUMAN_epic_story.jpg"
-            /></Link>
-            
           </div>
-          <h5>Hanuman</h5>
-          <p>price</p>
-        </div> */}
-      </div>
-
-      {/* <div className="d-flex four-image-container">
-        <div className="grid p-5 m-1">
-          <div className="imagecontainer p-4">
-            <img
-              className="imagee"
-              src="https://theos.in/blogs/hm/movie_HANUMAN_epic_story.jpg"
-            />
-          </div>
-          <h5>Hanuman</h5>
-          <p>price</p>
-        </div>
-        <div className="grid p-5 m-1">
-          <div className="imagecontainer p-4">
-            <img
-              className="imagee"
-              src="https://theos.in/blogs/hm/movie_HANUMAN_epic_story.jpg"
-            />
-          </div>
-          <h5>Hanuman</h5>
-          <p>price</p>
-        </div>
-        <div className="grid p-5 m-1">
-          <div className="imagecontainer p-4">
-            <img
-              className="imagee"
-              src="https://theos.in/blogs/hm/movie_HANUMAN_epic_story.jpg"
-            />
-          </div>
-          <h5>Hanuman</h5>
-          <p>price</p>
-        </div>
-
-        <div className="grid p-5 m-1">
-          <div className="imagecontainer p-4">
-            <img
-              className="imagee"
-              src="https://theos.in/blogs/hm/movie_HANUMAN_epic_story.jpg"
-            />
-          </div>
-          <h5>Hanuman</h5>
-          <p>price</p>
-        </div>
-      </div>
-
-      <div className=" d-flex">
-        <div className=" grid p-5 m-1">
-          <div className="imagecontainer p-4">
-            <img
-              className="imagee"
-              src="https://theos.in/blogs/hm/movie_HANUMAN_epic_story.jpg"
-            />
-          </div>
-          <h5>Hanuman</h5>
-          <p>price</p>
-        </div>
-        <div className="grid p-5 m-1">
-          <div className="imagecontainer p-4">
-            <img
-              className="imagee"
-              src="https://theos.in/blogs/hm/movie_HANUMAN_epic_story.jpg"
-            />
-          </div>
-          <h5>Hanuman</h5>
-          <p>price</p>
-        </div>
-        <div className="grid p-5 m-1">
-          <div className="imagecontainer p-4">
-            <img
-              className="imagee"
-              src="https://theos.in/blogs/hm/movie_HANUMAN_epic_story.jpg"
-            />
-          </div>
-          <h5>Hanuman</h5>
-          <p>price</p>
-        </div>
-
-        <div className="grid p-5 m-1">
-          <div className="imagecontainer p-4">
-            <img
-              className="imagee"
-              src="https://theos.in/blogs/hm/movie_HANUMAN_epic_story.jpg"
-            />
-          </div>
-          <h5>Hanuman</h5>
-          <p>price</p>
-        </div>
-      </div> */}
     </div>
   );
 }
