@@ -67,7 +67,7 @@ const SignUp = () => {
       } else {
         console.log("otp error", result?.data?.message);
 
-        if (result?.data?.message === "Primary Contact Is Required") {
+        if (result?.data?.message === "Primary Contact  Required") {
           setOtpError("phoneNumber is required");
         }
 
@@ -176,7 +176,7 @@ const SignUp = () => {
                       id="firstName"
                     />
                   </div>
-                  <div className="error-alignment">
+                  <div className="signup-error-alignment">
                     {errors.firstName && (
                       <p className="error">{errors.firstName}</p>
                     )}
@@ -193,7 +193,7 @@ const SignUp = () => {
                       id="lastName"
                     />
                   </div>
-                  <div className="error-alignment">
+                  <div className="signup-error-alignment">
                     {errors.lastName && (
                       <p className="error">{errors.lastName}</p>
                     )}
@@ -210,7 +210,7 @@ const SignUp = () => {
                       id="email"
                     />
                   </div>
-                  <div className="error-alignment">
+                  <div className="signup-error-alignment">
                     {errors.email && (
                       <p className="error">{errors.email}</p>
                     )}
@@ -227,7 +227,7 @@ const SignUp = () => {
                       id="password"
                     />
                   </div>
-                  <div className="error-alignment">
+                  <div className="signup-error-alignment">
                     {errors.password && (
                       <p className="error">{errors.password}</p>
                     )}
@@ -244,9 +244,9 @@ const SignUp = () => {
                       id="primaryContact"
                     />
                   </div>
-                  <div className="error-alignment">
+                  <div className="signup-error-alignment">
                     {message || errors.primaryContact && (
-                      <p className="error">{errors.primaryContact}</p>
+                      <p className="signup-message-error">{errors.primaryContact}</p>
                     )}
                   </div>
 
@@ -264,7 +264,7 @@ const SignUp = () => {
                       />
                       <div>
                         <button
-                          className="button primary"
+                          className="button"
                           type="button"
                           onClick={() => otpGenerate(values)}>
                           get OTP
@@ -273,7 +273,7 @@ const SignUp = () => {
                     </div>
                   </div>
 
-                  <div className="error-alignment">
+                  <div className="signup-error-alignment">
                     {otp == null || otp == '' && (
                       <p className="error">{errors.otp}</p>
                     )}
@@ -291,7 +291,7 @@ const SignUp = () => {
                     </p>
                   </div>
                   <div>
-                    <button className="btn btn-primary" type="submit" onClick={() => UserRegistration(values)}>Sign up</button>
+                    <button className="signup-button" type="submit" onClick={() => UserRegistration(values)}>Sign up</button>
                   </div>
 
                   <div className="error">

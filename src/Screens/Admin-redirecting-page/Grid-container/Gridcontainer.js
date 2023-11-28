@@ -3,9 +3,9 @@ import "./Gridcontainer.css";
 import { Link } from "react-router-dom";
 import { AdminTemples } from "../../../utils/api";
 
+
 function Gridcontainer() {
   const [data, setData] = useState([]);
-
 
   const AdminProfiles = async () => {
 
@@ -38,15 +38,12 @@ function Gridcontainer() {
       {data && data.map((item) => {
         return (
           <div>
-            <div><img src={item?.logo} />
-
-
+            <div>
+              <img src={item?.logo} />
             </div>
             <div>{item?.name}</div>
 
           </div>
-        )
-      })}
     </div>
   );
 }

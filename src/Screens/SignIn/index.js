@@ -116,9 +116,9 @@ console.log("Data in the sign in page =>>>>" + data)
                           id="primaryContact"
                         />
                       </div>
-                      <div className="error-alignment">
+                      <div className="login-error-alignment">
                         {errors.primaryContact && (
-                          <p className="error">{errors.primaryContact}</p>
+                          <p className="login-error">{errors.primaryContact}</p>
                         )}
                       </div>
                       <div className="inputfieldContainer">
@@ -133,22 +133,22 @@ console.log("Data in the sign in page =>>>>" + data)
                           id="password"
                         />
                       </div>
-                      <div className="error-alignment">
+                      <div className="login-error-alignment">
                         {errors.password && (
-                          <p className="error">{errors.password}</p>
+                          <p className="login-error">{errors.password}</p>
                         )}
                       </div>
                     </div>
 
-                    <div>
+                    
                       <button
-                        className="button mb-3"
+                        className="login-button mb-3"
                         type="submit"
                         onClick={handleSubmit}
                       >
                         Login
                       </button>
-                    </div>
+                    
                   </div>
                 );
               }}
@@ -163,7 +163,7 @@ console.log("Data in the sign in page =>>>>" + data)
               {msg && <p>{msg}</p>}
             </div>
 
-            <p className="forgotpassword">forgot password?</p>
+           <Link to="/Forgotpassword"><p className="forgotpassword">forgot password?</p></Link> 
           </div>
 
           <div className="bottom mt-2 mb-2">
@@ -177,7 +177,6 @@ console.log("Data in the sign in page =>>>>" + data)
             <div className="getApp ">
               <h3>Get the App</h3>
             </div>
-
             <div className="store">
               <div>
                 <img
