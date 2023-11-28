@@ -10,6 +10,7 @@ import Temple1 from "./Temple-redirected-page/Temple1/Temple1";
 import Temple2 from "./Temple-redirected-page/Temple2/Temple2";
 import Temple3 from "./Temple-redirected-page/Temple3/Temple3";
 import Temple4 from "./Temple-redirected-page/Temple4/Temple4";
+import Forgotpassword from "./Screens/Forgot-password/Forgotpassword";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/Signup" Component={SignUp} />
         <Route path="/AccountInformation" Component={AccountInformation} />
         <Route path="/Admin" Component={Admin} />
+        <Route path="/Forgotpassword" Component={Forgotpassword} />
         <Route path="/Temple1" Component={Temple1} />
         <Route path="/Temple2" Component={Temple2} />
         <Route path="/Temple3" Component={Temple3} />
