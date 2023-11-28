@@ -163,7 +163,7 @@ console.log("Data in the sign in page =>>>>" + data)
               {msg && <p>{msg}</p>}
             </div>
 
-            <p className="forgotpassword">forgot password?</p>
+           <Link to="/Forgotpassword"><p className="forgotpassword">forgot password?</p></Link> 
           </div>
 
           <div className="bottom mt-2 mb-2">
@@ -177,7 +177,6 @@ console.log("Data in the sign in page =>>>>" + data)
             <div className="getApp ">
               <h3>Get the App</h3>
             </div>
-
             <div className="store">
               <div>
                 <img
