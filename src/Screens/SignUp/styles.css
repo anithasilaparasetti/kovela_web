@@ -98,17 +98,18 @@ button{
     color: rgb(152, 148, 148);
 }
 
-.error{
+.signup-message-error{
     color: red;
     margin-top:-4px;
   }
-  .error-alignment{
+  .signup-error-alignment{
     width:300px;
     padding-left:30px;
     font-size: 13px;
     display: flex;
     justify-content:start;
     margin-left:3px;
+    margin-left:-30px;
   }
 
   .otp{
@@ -128,8 +129,17 @@ button{
     height: 18px;
     font-size: 10px;
     margin-left: -80px;
-    margin-top:5px;
+    margin-top:8px;
     text-align: center;
+    background-color: #0d6efd;
+
+  }
+  .signup-button{
+    background-color: #0d6efd;
+    border:none;
+    border-radius: 8px;
+    padding:10px;
+    font-size:12px;
   }
 
   .otpContainer{
@@ -147,8 +157,10 @@ button{
     width: 500px;
 }
 .otp{
+    margin-top: 5px;
     width:100px;
     border:none;
+    background-color: white;
     
 }
 .input-otp-container{
@@ -159,4 +171,5 @@ width:500px;
 display: flex;
 justify-content:space-between;
 height:5vh;
+
 }

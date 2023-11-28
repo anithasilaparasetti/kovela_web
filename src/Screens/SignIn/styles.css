@@ -220,19 +220,28 @@ label {
   justify-content: center;
   max-width: 500px;
 }
-.error{
-  color: red;
-  margin-top:-9px;
+.login-error{
+  color:red;
+  margin-top: -8px;
+ 
 }
-.error-alignment{
+.login-error-alignment{
   width:300px;
   padding-left:30px;
   font-size: 13px;
   display: flex;
   justify-content:start;
   margin-left:3px
+  
 }
 
+.login-button{
+  background-color: #0d6efd;
+  border:none;
+  border-radius: 8px;
+  padding:6px;
+  width: 285px;
+}
 .footer-section {
   display: flex;
   justify-content: space-between;
