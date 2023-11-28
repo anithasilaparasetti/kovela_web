@@ -2,7 +2,7 @@ import React from "react";
 import "./Gridcontainer.css";
 import { Link } from "react-router-dom";
 
-function Gridcontainer() {
+function Gridcontainer(props) {
   return (
     <div className="gridcontainer">
       <div className="d-flex four-image-container">
@@ -11,14 +11,14 @@ function Gridcontainer() {
             <Link to="/Temple1">
               <img
                 className="imagee"
-                src="https://theos.in/blogs/hm/movie_HANUMAN_epic_story.jpg"
+                src={props.img}
               />
             </Link>
           </div>
-          <h5>Hanuman</h5>
-          <p>price</p>
+          <h5>{props.heading}</h5>
+          <p>{props.price}</p>
         </div>
-        <div className="grid p-5 m-1">
+        {/* <div className="grid p-5 m-1">
           <div className="imagecontainer p-4">
             <Link to="/Temple2">
               <img
@@ -56,10 +56,10 @@ function Gridcontainer() {
           </div>
           <h5>Hanuman</h5>
           <p>price</p>
-        </div>
+        </div> */}
       </div>
 
-      <div className="d-flex four-image-container">
+      {/* <div className="d-flex four-image-container">
         <div className="grid p-5 m-1">
           <div className="imagecontainer p-4">
             <img
@@ -145,7 +145,7 @@ function Gridcontainer() {
           <h5>Hanuman</h5>
           <p>price</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

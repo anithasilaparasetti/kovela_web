@@ -116,9 +116,9 @@ console.log("Data in the sign in page =>>>>" + data)
                           id="primaryContact"
                         />
                       </div>
-                      <div className="error-alignment">
+                      <div className="login-error-alignment">
                         {errors.primaryContact && (
-                          <p className="error">{errors.primaryContact}</p>
+                          <p className="login-error">{errors.primaryContact}</p>
                         )}
                       </div>
                       <div className="inputfieldContainer">
@@ -133,22 +133,22 @@ console.log("Data in the sign in page =>>>>" + data)
                           id="password"
                         />
                       </div>
-                      <div className="error-alignment">
+                      <div className="login-error-alignment">
                         {errors.password && (
-                          <p className="error">{errors.password}</p>
+                          <p className="login-error">{errors.password}</p>
                         )}
                       </div>
                     </div>
 
-                    <div>
+                    
                       <button
-                        className="button mb-3"
+                        className="login-button mb-3"
                         type="submit"
                         onClick={handleSubmit}
                       >
                         Login
                       </button>
-                    </div>
+                    
                   </div>
                 );
               }}
