@@ -39,7 +39,7 @@ function Forgotpassword() {
 
         <p>Create New Account</p>
 
-        <button className="Back-to-login-button">Back to login</button>
+      <Link><button className="Back-to-login-button">Back to login</button></Link>  
         
       </div>
     

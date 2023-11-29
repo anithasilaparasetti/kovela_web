@@ -2,8 +2,8 @@ import axios from "axios";
 import { getAuthTokenDetails } from "../preferences/localStorage";
 
 
-export const BASEURL = 'http://20.235.89.214:9092/api/';
-export const POPULARURL = 'http://20.235.89.214:9096/';
+export const BASEURL = 'https://kovela.app/customer/api';
+export const POPULARURL = 'https://kovela.app/profile';
 let bearer_token = getAuthTokenDetails();
 
 export const authAxiousInstance1 = axios.create({
