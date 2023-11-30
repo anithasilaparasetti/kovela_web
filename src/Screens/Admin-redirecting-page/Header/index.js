@@ -1,6 +1,5 @@
 import React from "react";
-import "./Header.css";
-import { Zap,Video, Home,User,Camera } from "react-feather";
+import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell,faMessage,faGear,faHouse,faBolt,faVideo,faUser,faBagShopping,faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 

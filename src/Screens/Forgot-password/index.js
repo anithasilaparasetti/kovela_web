@@ -1,6 +1,5 @@
 import React from "react";
-import "./Forgotpassword.css";
-import { Link } from "react-feather";
+import "./styles.css";
 
 function Forgotpassword() {
   return (

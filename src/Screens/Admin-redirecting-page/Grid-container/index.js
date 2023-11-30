@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Gridcontainer.css";
-import { Link } from "react-router-dom";
+import "./styles.css";
 import { AdminTemples } from "../../../utils/api";
 
 
@@ -39,7 +38,7 @@ function Gridcontainer() {
         return (
           <div>
             <div>
-              <img src={item?.logo} />
+              <img alt = ""  style = {{width: "100px"}} src={item?.logo} />
             </div>
             <div>{item?.name}</div>
 

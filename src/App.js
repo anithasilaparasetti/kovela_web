@@ -5,12 +5,12 @@ import AccountInformation from './Screens/account-details';
 import { useEffect, useState } from "react";
 import ApplicationContext from "./utils/context-api/Context";
 import { getAuthTokenDetails,saveUserDetails } from "./utils/preferences/localStorage";  
-import Admin from "../src/Screens/admin/Admin"
-import Temple1 from "./Temple-redirected-page/Temple1/Temple1";
-import Temple2 from "./Temple-redirected-page/Temple2/Temple2";
-import Temple3 from "./Temple-redirected-page/Temple3/Temple3";
-import Temple4 from "./Temple-redirected-page/Temple4/Temple4";
-import Forgotpassword from "./Screens/Forgot-password/Forgotpassword";
+import Temple1 from "./Temple-redirected-page/Temple1/index.";
+import Temple2 from "./Temple-redirected-page/Temple2";
+import Temple3 from "./Temple-redirected-page/Temple3";
+import Temple4 from "./Temple-redirected-page/Temple4";
+import Admin from "./Screens/admin";
+import Forgotpassword from "./Screens/Forgot-password";
 
 
 function App() {

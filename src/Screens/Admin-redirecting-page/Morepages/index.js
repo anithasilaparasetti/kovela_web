@@ -1,5 +1,5 @@
 import React from "react";
-import "./Morepages.css";
+import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faEnvelope,faHotel,faLocationDot,faCirclePlay } from '@fortawesome/free-solid-svg-icons'
 

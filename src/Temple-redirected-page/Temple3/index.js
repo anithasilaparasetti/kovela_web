@@ -1,16 +1,16 @@
 import React from "react";
-import "./Temple1.css";
-import Header from "../../Screens/Admin-redirecting-page/Header/Header";
-import Newsfeed from "../../Screens/Admin-redirecting-page/Newfeeds/Newsfeed";
-import Morepages from "../../Screens/Admin-redirecting-page/Morepages/Morepages";
-import Account from "../../Screens/Admin-redirecting-page/Account-details/Account";
+import "./styles.css";
+import Header from "../../Screens/Admin-redirecting-page/Header";
+import Newsfeed from "../../Screens/Admin-redirecting-page/Newfeeds";
+import Morepages from "../../Screens/Admin-redirecting-page/Morepages";
+import Account from "../../Screens/Admin-redirecting-page/Account-details";
 
-function Temple1() {
+function Temple3() {
   return (
     <div>
       <div className="p-3">
         <Header />
-      </div> 
+      </div>
       <div className="admin-container p-1 d-flex">
         <div className="leftmenu">
           <Newsfeed />
@@ -80,4 +80,6 @@ function Temple1() {
   );
 }
 
-export default Temple1;
+export default Temple3;
+
+ 

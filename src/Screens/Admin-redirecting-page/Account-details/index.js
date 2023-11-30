@@ -1,5 +1,5 @@
 import React from "react";
-import "./Account.css";
+import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faGear,faChartPie,faMessage } from '@fortawesome/free-solid-svg-icons'
 

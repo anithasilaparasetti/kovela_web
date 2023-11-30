@@ -1,11 +1,10 @@
 import React from "react";
-import "./Admin.css";
-import Header from "../Admin-redirecting-page/Header/Header";
-import Newsfeed from "../Admin-redirecting-page/Newfeeds/Newsfeed";
-import Morepages from "../Admin-redirecting-page/Morepages/Morepages";
-import Account from "../Admin-redirecting-page/Account-details/Account";
-import Gridcontainer from "../Admin-redirecting-page/Grid-container/Gridcontainer";
-import { Link } from "react-router-dom";
+import "./styles.css";
+import Header from "../Admin-redirecting-page/Header";
+import Newsfeed from "../Admin-redirecting-page/Newfeeds";
+import Morepages from "../Admin-redirecting-page/Morepages";
+import Account from "../Admin-redirecting-page/Account-details";
+import Gridcontainer from "../Admin-redirecting-page/Grid-container";
 
 function Admin() {
   return (

@@ -1,11 +1,11 @@
 import React from "react";
-import "./Temple4.css";
-import Header from "../../Screens/Admin-redirecting-page/Header/Header";
-import Newsfeed from "../../Screens/Admin-redirecting-page/Newfeeds/Newsfeed";
-import Morepages from "../../Screens/Admin-redirecting-page/Morepages/Morepages";
-import Account from "../../Screens/Admin-redirecting-page/Account-details/Account";
+import "./styles.css";
+import Header from "../../Screens/Admin-redirecting-page/Header";
+import Newsfeed from "../../Screens/Admin-redirecting-page/Newfeeds";
+import Morepages from "../../Screens/Admin-redirecting-page/Morepages";
+import Account from "../../Screens/Admin-redirecting-page/Account-details";
 
-function Temple4() {
+function Temple2() {
   return (
     <div>
       <div className="p-3">
@@ -15,8 +15,7 @@ function Temple4() {
         <div className="leftmenu">
           <Newsfeed />
           <Morepages />
-          <Account />
-          
+          <Account /> 
         </div>
         <div className="p-5 temple-container">
           <div className="p-5">
@@ -81,5 +80,5 @@ function Temple4() {
   );
 }
 
-export default Temple4;
+export default Temple2;
 

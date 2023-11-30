@@ -1,5 +1,5 @@
 import React from "react";
-import "./Newsfeed.css";
+import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTv,faIdBadge,faGlobe,faBolt,faUser} from '@fortawesome/free-solid-svg-icons'
 
