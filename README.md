@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+English | [简体中文](./README.zh_CN.md)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">React Antd Admin</h1>
 
-## Available Scripts
+<div align="center">
 
-In the project directory, you can run:
+The best practices for React Hooks and Typescript.
 
-### `npm start`
+<a href="https://github.com/facebook/react">
+  <img src="https://img.shields.io/badge/react-17.0.0-brightgreen" alt="React">
+</a>
+<a href="https://github.com/ant-design/ant-design">
+  <img src="https://img.shields.io/badge/ant--design-5.2.0-brightgreen" alt="ant-design">
+</a>
+<a href="https://github.com/microsoft/TypeScript" rel="nofollow">
+  <img src="https://img.shields.io/badge/typescript-4.3.2-brightgreen" alt="Typescript">
+</a>
+<a href="https://github.com/reduxjs/redux" rel="nofollow">
+  <img src="https://img.shields.io/badge/@reduxjs/toolkit-1.4.0-brightgreen" alt="Redux">
+</a>
+<a href="https://github.com/WinmezzZ/react-antd-admin/blob/master/LICENSE">
+  <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license">
+</a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Preview: https://react-admin.winme.dev
+- Documentation: https://react-admin.winme.dev/documentation
 
-### `npm test`
+## ✨ Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 💡 **TypeScript**: A language for application-scale JavaScript
+- 📜 **Blocks**: Build page with block template
+- 💎 **Hooks**: Use react hooks API instead of traditional class API
+- 📐 **Common Templates**: Typical templates for enterprise applications
+- 🚀 **State of The Art Development**: Newest development stack of React/hooks/Redux/antd/typescript
+- 📱 **Responsive**: Designed for variable screen sizes
+- 🎨 **Theming**: Dynamically switch system theme
+- 🌐 **International**: Built-in i18n solution
+- ⚙️ **Best Practices**: Solid workflow to make your code healthy
+- 🔢 **Mock development**: Easy to use mock development solution
+- ✅ **Usage**: No barriers to use with complete documentation and detailed comments
 
-### `npm run build`
+## 📦 Install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+$ git clone https://github.com/WinmezzZ/react-antd-admin.git
+$ cd react-antd-admin
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# npm
+$ npm install
+$ npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# yarn
+$ yarn install
+$ yarn start
+```
 
-### `npm run eject`
+## 🔨 Build
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+# npm
+$ npm install
+$ npm run build
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# yarn
+$ yarn install
+$ yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project default deploy on root site, if you want to deploy on a child site, you need to set the public path. In the `.env` file at the root of this project, add `PUBLIC_URL=YOUR_CHILD_PATH`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🖥 Browsers support
 
-## Learn More
+Modern browsers and Internet Explorer 10+.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Electron |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IE11, Edge                                                                                                                                                                                                      | last 2 versions                                                                                                                                                                                                   | last 2 versions                                                                                                                                                                                               | last 2 versions                                                                                                                                                                                               | last 2 versions                                                                                                                                                                                           | last 2 versions                                                                                                                                                                                                       |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🤝 Contributing
 
-### Code Splitting
+We very much welcome your contribution, you can build together with us in the following ways 😃
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Use Ant Design Pro in your daily work.
+- Submit [GitHub issues](https://github.com/WinmezzZ/react-antd-admin/issues) to report bugs or ask questions.
+- Propose [Pull Request](https://github.com/WinmezzZ/react-antd-admin/pulls) to improve our code.
